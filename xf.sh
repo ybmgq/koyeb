@@ -70,10 +70,6 @@ cat <<EOF >/etc/v2ray/config.json
       },
       "streamSettings": {
         "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": true,
-          "serverName": "wx.tenpay.com"
         },
         "wsSettings": {
           "path": "/",
