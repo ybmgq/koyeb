@@ -63,16 +63,15 @@ cat <<EOF >/etc/v2ray/config.json
         "clients": [
           {
             "id": "10974d1a-cbd6-4b6f-db1d-38d78b3fb108",
-            "alterId": 2,
-            "email": "t@t.tt"
+            "alterId": 0,
           }
         ],
-        "allowTransparent": false
+        "allowTransparent": true
       },
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/tj",
+          "path": "/",
           "headers": {
             "Host": "m.sc.189.cn"
           }
