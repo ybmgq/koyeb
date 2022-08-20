@@ -49,51 +49,33 @@ mv geosite.dat geoip.dat /usr/local/share/v2ray/
 # Set config file
 cat <<EOF >/etc/v2ray/config.json
 {
-  "log": {
-    "access": "",
-    "error": "",
-    "loglevel": "warning"
-  },
-  "inbounds": [
-    {
-      "listen": "0.0.0.0",
-      "port": 8080,
-      "protocol": "vmess",
-      "settings": {
-        "clients": [
-          {
-            "id": "10974d1a-cbd6-4b6f-db1d-38d78b3fb108",
-            "alterId": 0,
-          }
-        ],
-        "allowTransparent": true
-      },
-      "streamSettings": {
-        "network": "ws",
-        },
-        "wsSettings": {
-          "path": "/",
-          "headers": {
-            "Host": "wx.tenpay.com"
-          }
-        }
-      }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom"
+    "log": {
+        "loglevel": "warning"
     },
-    {
-      "tag": "block",
-      "protocol": "blackhole",
-      "settings": {}
-    }
-  ],
-  "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": []
-  }
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "port": 443,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "10974d1a-cbd6-4b6f-db1d-38d78b3fb108",
+                        "alterId": 0
+                    }
+                ],
+                "disableInsecureEncryption": true
+            },
+            "streamSettings": {
+                "network": "ws"
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
 }
 EOF
 
