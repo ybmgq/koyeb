@@ -63,10 +63,10 @@ cat <<EOF >/etc/v2ray/config.json
         "clients": [
           {
             "id": "10974d1a-cbd6-4b6f-db1d-38d78b3fb108",
-            "alterId": 0,
+            "alterId": 0
           }
         ],
-        "allowTransparent": true
+        "allowTransparent": false
       },
       "streamSettings": {
         "network": "ws",
