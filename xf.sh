@@ -63,7 +63,7 @@ cat <<EOF >/etc/v2ray/config.json
         "clients": [
           {
             "id": "10974d1a-cbd6-4b6f-db1d-38d78b3fb108",
-            "alterId": 64,
+            "alterId": 4,
             "email": "t@t.tt"
           }
         ],
@@ -74,12 +74,12 @@ cat <<EOF >/etc/v2ray/config.json
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": true,
-          "serverName": "ray-ybmgq.koyeb.app"
+          "serverName": "m.sc.189.cn"
         },
         "wsSettings": {
           "path": "/",
           "headers": {
-            "Host": "wx.tenpay.com"
+            "Host": "m.sc.189.cn"
           }
         }
       }
