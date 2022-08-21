@@ -59,11 +59,11 @@ cat <<EOF >/etc/v2ray/config.json
       "port": 443,
       "protocol": "vmess",
       "settings": {
-        "udp": true,
+        "udp": false,
         "clients": [
           {
             "id": "10974d1a-cbd6-4b6f-db1d-38d78b3fb108",
-            "alterId": 0,
+            "alterId": 64,
             "email": "t@t.tt"
           }
         ],
@@ -71,10 +71,15 @@ cat <<EOF >/etc/v2ray/config.json
       },
       "streamSettings": {
         "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": true,
+          "serverName": "wx.tenpay.com"
+        },
         "wsSettings": {
           "path": "/",
           "headers": {
-            "Host": "m.sc.189.cn"
+            "Host": "wx.tenpay.com"
           }
         }
       }
