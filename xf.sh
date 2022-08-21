@@ -56,14 +56,14 @@ cat <<EOF >/etc/v2ray/config.json
   },
   "inbounds": [
     {
-      "port": 80,
+      "port": 443,
       "protocol": "vmess",
       "settings": {
         "udp": true,
         "clients": [
           {
             "id": "10974d1a-cbd6-4b6f-db1d-38d78b3fb108",
-            "alterId": 64,
+            "alterId": 0,
             "email": "t@t.tt"
           }
         ],
