@@ -59,11 +59,11 @@ cat <<EOF >/etc/v2ray/config.json
       "port": 80,
       "protocol": "vmess",
       "settings": {
-        "udp": false,
+        "udp": true,
         "clients": [
           {
             "id": "10974d1a-cbd6-4b6f-db1d-38d78b3fb108",
-            "alterId": 4,
+            "alterId": 64,
             "email": "t@t.tt"
           }
         ],
@@ -71,11 +71,6 @@ cat <<EOF >/etc/v2ray/config.json
       },
       "streamSettings": {
         "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": true,
-          "serverName": "m.sc.189.cn"
-        },
         "wsSettings": {
           "path": "/",
           "headers": {
