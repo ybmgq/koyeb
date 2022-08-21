@@ -56,7 +56,7 @@ cat <<EOF >/etc/v2ray/config.json
   },
   "inbounds": [
     {
-      "port": 8080,
+      "port": 443,
       "protocol": "vless",
       "settings": {
         "udp": false,
@@ -65,7 +65,7 @@ cat <<EOF >/etc/v2ray/config.json
             "id": "2e5cec54-97bf-429f-a394-c25ab0ecebd2",
             "alterId": 0,
             "email": "t@t.tt",
-            "flow": ""
+            "flow": "xtls-rprx-direct"
           }
         ],
         "decryption": "none",
