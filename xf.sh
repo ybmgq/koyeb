@@ -56,17 +56,19 @@ cat <<EOF >/etc/v2ray/config.json
   },
   "inbounds": [
     {
-      "port": 443,
+      "port": 8080,
       "protocol": "vless",
       "settings": {
         "udp": false,
         "clients": [
           {
-            "id": "3389e01b-de3c-4cb6-ec2c-a10d5c0c2664",
+            "id": "2e5cec54-97bf-429f-a394-c25ab0ecebd2",
             "alterId": 0,
-            "email": "t@t.tt"
+            "email": "t@t.tt",
+            "flow": ""
           }
         ],
+        "decryption": "none",
         "allowTransparent": false
       },
       "streamSettings": {
@@ -74,7 +76,7 @@ cat <<EOF >/etc/v2ray/config.json
         "wsSettings": {
           "path": "/",
           "headers": {
-            "Host": "wx.tenpay.com"
+            "Host": "m.sc.189.cn"
           }
         }
       }
