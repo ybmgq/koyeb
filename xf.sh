@@ -57,7 +57,7 @@ cat <<EOF >/etc/v2ray/config.json
   "inbounds": [
     {
       "port": 443,
-      "protocol": "vmess",
+      "protocol": "vless",
       "settings": {
         "udp": false,
         "clients": [
@@ -74,7 +74,7 @@ cat <<EOF >/etc/v2ray/config.json
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": true,
-          "serverName": "wx.tenpay.com"
+          "serverName": "ray-ybmgq.koyeb.app"
         },
         "wsSettings": {
           "path": "/",
