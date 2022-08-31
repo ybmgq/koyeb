@@ -49,107 +49,51 @@ mv geosite.dat geoip.dat /usr/local/share/v2ray/
 # Set config file
 cat <<EOF >/etc/v2ray/config.json
 {
-  "log": null,
-  "routing": {
-    "rules": [
-      {
-        "inboundTag": [
-          "api"
-        ],
-        "outboundTag": "api",
-        "type": "field"
-      },
-      {
-        "ip": [
-          "geoip:private"
-        ],
-        "outboundTag": "blocked",
-        "type": "field"
-      },
-      {
-        "outboundTag": "blocked",
-        "protocol": [
-          "bittorrent"
-        ],
-        "type": "field"
-      }
-    ]
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "warning"
   },
-  "dns": null,
   "inbounds": [
     {
-      "listen": "127.0.0.1",
-      "port": 62789,
-      "protocol": "dokodemo-door",
-      "settings": {
-        "address": "127.0.0.1"
-      },
-      "streamSettings": null,
-      "tag": "api",
-      "sniffing": null
-    },
-    {
-      "listen": null,
       "port": 443,
-      "protocol": "vless",
+      "protocol": "vmess",
       "settings": {
+        "udp": false,
         "clients": [
           {
-            "id": "2e5cec54-97bf-429f-a394-c25ab0ecebd2",
-            "alterId": 0
+            "id": "10974d1a-cbd6-4b6f-db1d-38d78b3fb108",
+            "alterId": 0,
+            "email": "t@t.tt"
           }
         ],
-        "disableInsecureEncryption": false
+        "allowTransparent": false
       },
       "streamSettings": {
         "network": "ws",
-        "security": "none",
         "wsSettings": {
           "path": "/",
           "headers": {
             "Host": "wx.tenpay.com"
           }
         }
-      },
-      "tag": "inbound-443",
-      "sniffing": {
-        "enabled": false,
-        "destOverride": [
-          "http",
-          "tls"
-        ]
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom",
-      "settings": {}
+      "protocol": "freedom"
     },
     {
+      "tag": "block",
       "protocol": "blackhole",
-      "settings": {},
-      "tag": "blocked"
+      "settings": {}
     }
   ],
-  "transport": null,
-  "policy": {
-    "system": {
-      "statsInboundDownlink": true,
-      "statsInboundUplink": true
-    }
-  },
-  "api": {
-    "services": [
-      "HandlerService",
-      "LoggerService",
-      "StatsService"
-    ],
-    "tag": "api"
-  },
-  "stats": {},
-  "reverse": null,
-  "fakeDns": null
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": []
+  }
 }
 EOF
 
