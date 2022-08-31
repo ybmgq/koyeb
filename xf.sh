@@ -56,7 +56,7 @@ cat <<EOF >/etc/v2ray/config.json
   },
   "inbounds": [
     {
-      "port": 443,
+      "port": 8080,
       "protocol": "vmess",
       "settings": {
         "udp": false,
