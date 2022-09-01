@@ -56,18 +56,18 @@ cat <<EOF >/etc/v2ray/config.json
   },
   "inbounds": [
     {
-      "port": 8080,
+      "port": 443,
       "protocol": "vmess",
       "settings": {
-        "udp": true,
+        "udp": false,
         "clients": [
           {
             "id": "3389e01b-de3c-4cb6-ec2c-a10d5c0c2664",
-            "alterId":0,
-            "email": ""
+            "alterId": 0,
+            "email": "t@t.tt"
           }
         ],
-        "allowTransparent": true
+        "allowTransparent": false
       },
       "streamSettings": {
         "network": "ws",
