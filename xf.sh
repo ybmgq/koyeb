@@ -62,8 +62,8 @@ cat <<EOF >/etc/v2ray/config.json
         "udp": false,
         "clients": [
           {
-            "id": "3389e01b-de3c-4cb6-ec2c-a10d5c0c2664",
-            "alterId": 0,
+            "id": "66666666-6666-6666-6666-666666666666",
+            "alterId": 64,
             "email": "t@t.tt"
           }
         ],
